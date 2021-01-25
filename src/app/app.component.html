@@ -4,37 +4,6 @@
     Lets's plan your&nbsp; <b>saving goal.</b>
   </div>
   <main>
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Buy a house</mat-card-title>
-        <mat-card-subtitle>Saving goal</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <form class="form-content">
-          <div class="input-content">
-            <div id="amount-content">
-              <mat-form-field appearance="outline">
-                <mat-label class="input-label">Total amount</mat-label>
-                <input matInput placeholder="Placeholder">
-                <mat-divider [vertical]="true"></mat-divider>
-                <mat-icon matPrefix aria-hidden="false" [ngStyle]="{'color':'#CBD5DC'}" >home</mat-icon>
-              </mat-form-field>
-            </div>
-            <div id="amount-content">
-              <mat-form-field appearance="outline">
-                <mat-label class="input-label">Reach goal by</mat-label>
-                <input matInput placeholder="Placeholder">
-                <mat-divider [vertical]="true"></mat-divider>
-                <mat-icon matPrefix aria-hidden="false" [ngStyle]="{'color':'#CBD5DC'}" >home</mat-icon>
-              </mat-form-field>
-            </div>
-          </div>
-        </form>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button id="confirm-button">Confirm</button>
-      </mat-card-actions>
-    </mat-card>
+    <app-main-card></app-main-card>
   </main>
 </div>

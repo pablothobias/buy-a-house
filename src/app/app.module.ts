@@ -4,10 +4,16 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from './modules/material.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppInputComponent } from './components/app-input/app-input.component';
+import { AppMainCardComponent } from './components/app-main-card/app-main-card.component';
+import { AppDatepickerComponent } from './components/app-datepicker/app-datepicker.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppInputComponent,
+    AppMainCardComponent,
+    AppDatepickerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<mat-form-field appearance="outline">
+    <input matInput [matDatepicker]="appDatepicker" [min]="today" placeholder="Reach goal by"
+        (click)="openDatePicker(appDatepicker)">
+    <mat-datepicker-toggle matSuffix [for]="appDatepicker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #appDatepicker startView="multi-year" (monthSelected)="closeDatePicker($event, appDatepicker)"></mat-datepicker>
+</mat-form-field>
