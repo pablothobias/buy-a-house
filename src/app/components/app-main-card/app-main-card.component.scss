@@ -8,18 +8,25 @@ mat-card {
         font-size: 2.4rem;
     }
 
+    mat-card-content {
+        margin-bottom: 0;
+    }
+
     mat-card-subtitle {
         color: #708797;
         font-weight: 400;
         font-size: 1.6rem;
     }
 
-    mat-card-actions {
+    mat-card-footer {
+
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
 
         #confirm-button {
+            margin-top: 20px;
             background-color: #1b31a8;
             border-radius: 20px;
             width: 320px;
@@ -37,6 +44,7 @@ mat-card {
 @media (max-width: 768px) {
     mat-card {
         width: 100vw;
+        height: 475px;
         padding: 1rem;
 
         mat-card-content {
@@ -48,6 +56,10 @@ mat-card {
                     width: 100%;
                 }
             }
+        }
+
+        mat-card-footer {
+            width: 100%;
         }
     }
 }

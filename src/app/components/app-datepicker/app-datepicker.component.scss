@@ -1,14 +1,16 @@
-/* default and hover color */
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+.input-label {
+    color: #1e2a32;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+::ng-deep .mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline{
+    color: red !important;
+}
+::ng-deep .mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline-thick{
     opacity: 1 !important;
 }
 
-/* focused color */
-::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: green;
-}
-
-/* floating label color */
-::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
-    color: green;
+::ng-deep .mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: red !important;
 }

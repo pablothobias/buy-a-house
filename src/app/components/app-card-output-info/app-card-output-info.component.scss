@@ -1,0 +1,57 @@
+.output-info-content {
+    width: 35rem;
+    height: 150px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr;
+    grid-gap: 0;
+    border-radius: 20px;
+
+    .monthly-amount-value-content {
+        width: 100%;
+        border-radius: 8px 8px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid #E9EEF2;
+
+        #value-title-content {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #1e2a32;
+        }
+
+        #value-content {
+            font-size: 24px;
+            font-weight: 500;
+            color: #0079ff;
+        }
+    }
+
+    .detail-info-content {
+        width: 100%;
+        background-color: #f4f8fa;
+        border-radius: 0px 0px 8px 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        p {
+            width: 80%;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            color: #1c1e1f;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .output-info-content {
+        width: 40rem;
+        margin-right: 30%;
+    }
+}
