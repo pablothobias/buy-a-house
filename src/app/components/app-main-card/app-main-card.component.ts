@@ -9,9 +9,14 @@ export class AppMainCardComponent {
 
   constructor() { }
 
-  amount: string;
+  amount: string| null;
+  goal: number| null;
 
   amountListener(incomingAmount: string | null) {
     this.amount = incomingAmount;
+  }
+
+  goalListener(incomingGoal: number | null) {
+    this.goal = incomingGoal;
   }
 }

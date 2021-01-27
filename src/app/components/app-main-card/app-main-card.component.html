@@ -11,13 +11,13 @@
               <app-input (amountEmitter)="amountListener($event)"></app-input>
           </div>
           <div id="amount-content">
-            <app-datepicker></app-datepicker>
+            <app-datepicker (goalEmitter)="goalListener($event)"></app-datepicker>
           </div>
         </div>
       </form>
     </mat-card-content>
     <mat-card-footer>
-      <app-card-output-info [amount]="amount"></app-card-output-info>
+      <app-card-output-info [amount]="amount" [goal]="goal"></app-card-output-info>
       <button mat-raised-button id="confirm-button">Confirm</button>
     </mat-card-footer>
   </mat-card>

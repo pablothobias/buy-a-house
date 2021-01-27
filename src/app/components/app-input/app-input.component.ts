@@ -20,7 +20,6 @@ export class AppInputComponent implements OnInit {
       this.amountEmitter.emit(null);
     } else {
       const rawAmountValue = this.sanitizeAmountValue(value);
-      console.log(rawAmountValue);
       this.amountEmitter.emit(rawAmountValue);
     }
   }
