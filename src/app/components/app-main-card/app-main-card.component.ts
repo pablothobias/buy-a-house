@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { selectedDate } from 'src/app/models/seleted-date.model';
 
 @Component({
   selector: 'app-main-card',
@@ -10,13 +11,13 @@ export class AppMainCardComponent {
   constructor() { }
 
   amount: string| null;
-  goal: number| null;
+  goal: selectedDate| null;
 
   amountListener(incomingAmount: string | null) {
     this.amount = incomingAmount;
   }
 
-  goalListener(incomingGoal: number | null) {
+  goalListener(incomingGoal: selectedDate | null) {
     this.goal = incomingGoal;
   }
 }

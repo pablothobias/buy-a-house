@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { selectedDate } from 'src/app/models/seleted-date.model';
 
 @Component({
   selector: 'app-card-output-info',
@@ -10,7 +11,7 @@ export class AppCardOutputInfoComponent implements OnInit {
   constructor() { }
 
   @Input() amount: string | null;
-  @Input() goal: number | null;
+  @Input() goal: selectedDate | null;
   amountAsNumber: number | null;
   total: number;
 
@@ -18,8 +19,6 @@ export class AppCardOutputInfoComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-
-    console.log(changes);
 
     if (changes?.amount) {
       this.sanitizeAmountValue(changes.amount.currentValue);
@@ -39,7 +38,7 @@ export class AppCardOutputInfoComponent implements OnInit {
     this.handleTotalOutputInfo();
   }
 
-  sanitizeGoalValue(goal: number | null) {
+  sanitizeGoalValue(goal: selectedDate | null) {
     if (goal !== null) {
       this.goal = goal;
     } else {
@@ -52,10 +51,8 @@ export class AppCardOutputInfoComponent implements OnInit {
   handleTotalOutputInfo() {
     if (this.goal == null || this.amountAsNumber == null) {
       this.total = null;
-      console.log('null');
     } else {
-      this.total = this.amountAsNumber / this.goal;
-      console.log(this.total, this.amountAsNumber, this.goal);
+      this.total = this.amountAsNumber / this.goal.value;
     }
   }
 }

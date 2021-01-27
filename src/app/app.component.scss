@@ -32,3 +32,19 @@
         justify-content: center;
     }
 }
+
+// Angular Material Custom Style
+
+::ng-deep .mat-form-field {
+    .mat-input-element {
+        color: #4d6475 !important;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-top: -12% !important;
+    }
+}
+
+//input outline color
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #E9EEF2!important;
+}

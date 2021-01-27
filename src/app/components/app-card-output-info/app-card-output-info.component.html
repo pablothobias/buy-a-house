@@ -8,8 +8,9 @@
         </span>
     </div>
     <div class="detail-info-content">
-            <p>
-                You’re planning <strong>{{goal}}</strong> monthly deposits to reach your <strong>{{amountAsNumber| currency}}</strong>  goal by October 2020.
-            </p>
+        <p>
+            You’re planning <strong>{{goal.value}}</strong> monthly deposits to reach your <strong>{{amountAsNumber|
+                currency}}</strong> goal by <strong>{{goal.month}}</strong> &nbsp;<strong>{{goal.year}}</strong>.
+        </p>
     </div>
 </div>

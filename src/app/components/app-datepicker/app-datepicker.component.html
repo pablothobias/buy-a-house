@@ -1,6 +1,6 @@
 <mat-form-field appearance="outline">
     <mat-label class="input-label">Reach goal by</mat-label>
-    <input matInput [matDatepicker]="appDatepicker" [min]="today" (click)="openDatePicker(appDatepicker)">
+    <input matInput [matDatepicker]="appDatepicker" [min]="today" (click)="openDatePicker(appDatepicker)" [value]="selectedDate">
     <mat-datepicker-toggle matSuffix [for]="appDatepicker">
         <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
     </mat-datepicker-toggle>

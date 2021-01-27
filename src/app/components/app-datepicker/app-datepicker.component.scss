@@ -4,13 +4,6 @@
     font-weight: 400;
 }
 
-::ng-deep .mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline{
-    color: red !important;
-}
-::ng-deep .mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline-thick{
-    opacity: 1 !important;
-}
-
-::ng-deep .mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: red !important;
+mat-datepicker-toggle {
+    color:#E9EEF2 !important;
 }
