@@ -1,3 +1,11 @@
+.full-size {
+    height: 55vh;
+}
+
+.reduced-size {
+    height: 35vh;
+}
+
 mat-card {
     background-color: #ffffff;
     height: 400px;
@@ -19,7 +27,6 @@ mat-card {
     }
 
     mat-card-footer {
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -75,5 +82,25 @@ mat-card {
                 flex-direction: row;
             }
         }
+    }
+}
+
+@media (max-width: 812px) {
+    .full-size {
+        height: 60vh;
+    }
+    
+    .reduced-size {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .full-size {
+        height: 80vh;
+    }
+    
+    .reduced-size {
+        height: 55vh;
     }
 }

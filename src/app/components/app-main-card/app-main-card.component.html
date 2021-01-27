@@ -1,23 +1,24 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Buy a house</mat-card-title>
-      <mat-card-subtitle>Saving goal</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <form class="form-content">
-        <div class="input-content">
-          <div id="amount-content">
-              <app-input (amountEmitter)="amountListener($event)"></app-input>
-          </div>
-          <div id="amount-content">
-            <app-datepicker (goalEmitter)="goalListener($event)"></app-datepicker>
-          </div>
+<mat-card class="example-card"
+  [ngClass]="{'full-size': goal !== null && amount !== null, 'reduced-size': goal == null || amount == null}">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Buy a house</mat-card-title>
+    <mat-card-subtitle>Saving goal</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form-content">
+      <div class="input-content">
+        <div id="amount-content">
+          <app-input (amountEmitter)="amountListener($event)"></app-input>
         </div>
-      </form>
-    </mat-card-content>
-    <mat-card-footer>
-      <app-card-output-info [amount]="amount" [goal]="goal"></app-card-output-info>
-      <button mat-raised-button id="confirm-button">Confirm</button>
-    </mat-card-footer>
-  </mat-card>
+        <div id="amount-content">
+          <app-datepicker (goalEmitter)="goalListener($event)"></app-datepicker>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-footer>
+    <app-card-output-info [amount]="amount" [goal]="goal"></app-card-output-info>
+    <button mat-raised-button id="confirm-button">Confirm</button>
+  </mat-card-footer>
+</mat-card>

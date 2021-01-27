@@ -7,3 +7,9 @@
 mat-datepicker-toggle {
     color:#E9EEF2 !important;
 }
+
+@media (max-width: 768px) {
+    mat-form-field {
+        width: 100%;
+    }
+}
