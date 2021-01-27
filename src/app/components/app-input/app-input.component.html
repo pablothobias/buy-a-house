@@ -1,6 +1,6 @@
 <mat-form-field appearance="outline">
     <mat-label class="input-label">Total amount</mat-label>
-    <input matInput placeholder="Placeholder">
+    <input #amount currencyMask  min="00.00" matInput (keyup)="amountChangeObserver(amount.value)" [value]="amount.value">
     <mat-divider [vertical]="true"></mat-divider>
     <mat-icon matPrefix aria-hidden="false" [ngStyle]="{'color':'#CBD5DC'}">home</mat-icon>
 </mat-form-field>

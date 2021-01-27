@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-card-output-info',
@@ -9,7 +9,23 @@ export class AppCardOutputInfoComponent implements OnInit {
 
   constructor() { }
 
+  @Input() amount: string;
+  amountAsNumber: number | null;
+
   ngOnInit(): void {
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes?.amount.previousValue !== changes?.amount.currentValue){
+      this.sanitizeAmountValue(changes.amount.currentValue);
+    }
+  }
+
+  sanitizeAmountValue(amount: string | null) {
+    if (amount !== null) {
+      this.amountAsNumber = parseFloat(amount);
+    } else {
+      this.amountAsNumber = null;
+    }
+  }
 }
