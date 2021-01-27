@@ -1,27 +1,50 @@
-# BuyAHouse
+# Buy a house - Origin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+### Requirements:
 
-## Development server
+- [Angular CLI](https://cli.angular.io/)
+- [Node >=12](https://nodejs.org/en/)
+- [NPM >= 6](https://www.npmjs.com/get-npm)
+or
+- [Docker](https://www.docker.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Get the code 
+```sh
+$ git clone https://github.com/pablothobias/buy-a-house
+$ cd buy-a-house
+$ npm i
+```
 
-## Code scaffolding
+### Development server
+Run ```ng serve``` for a dev server. Navigate to  `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Build
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/directory`. 
+Use the `-prod` flag for a production build.
 
-## Build
+### Run the application through Docker
+tart the Docker application on your computer. Then, navigate to the `buy-a-house` app through the terminal:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run the following command on the app root directory:
+```sh
+$ docker build -t buy-a-house .
+```
+This will generate an image based on the `buy-a-house app` requirements.
 
-## Running unit tests
+You can use the command below to check if the image was built in fact:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+$ docker images
+```
 
-## Running end-to-end tests
+Now, run the image you've just built with the command:
+```sh
+$ docker run -p 8000:80 -d -it buy-a-house
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Verify the deployment by navigating to your localhost address in your preferred browser.
 
-## Further help
+```sh
+http://localhost:8000
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
